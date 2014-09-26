@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var bleedLabel: UILabel!
+    @IBOutlet weak var breedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

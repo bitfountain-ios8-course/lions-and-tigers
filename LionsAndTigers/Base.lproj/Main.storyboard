@@ -45,7 +45,7 @@
                                     <rect key="frame" x="16" y="466" width="288" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dko-q0-D6z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dko-q0-D6z">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,7 +89,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="5Sk-Lz-5kK" id="J0M-aa-Z4P"/>
                         <outlet property="bgImageView" destination="zNR-ce-tZg" id="yYa-bs-0nY"/>
-                        <outlet property="bleedLabel" destination="dko-q0-D6z" id="cpu-Hu-b1v"/>
+                        <outlet property="breedLabel" destination="dko-q0-D6z" id="lYn-Yi-XUN"/>
                         <outlet property="nameLabel" destination="zCT-PW-byy" id="IDV-ba-l5L"/>
                     </connections>
                 </viewController>

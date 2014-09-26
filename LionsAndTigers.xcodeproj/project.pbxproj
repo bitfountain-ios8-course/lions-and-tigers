@@ -13,6 +13,7 @@
 		EC7BD63C19D59D24000A52A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7BD63B19D59D24000A52A6 /* Images.xcassets */; };
 		EC7BD63F19D59D24000A52A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7BD63D19D59D24000A52A6 /* LaunchScreen.xib */; };
 		EC7BD64B19D59D24000A52A6 /* LionsAndTigersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7BD64A19D59D24000A52A6 /* LionsAndTigersTests.swift */; };
+		ECA3848419D5D8FA0084CBB9 /* Tiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3848319D5D8FA0084CBB9 /* Tiger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EC7BD64419D59D24000A52A6 /* LionsAndTigersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionsAndTigersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7BD64919D59D24000A52A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC7BD64A19D59D24000A52A6 /* LionsAndTigersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionsAndTigersTests.swift; sourceTree = "<group>"; };
+		ECA3848319D5D8FA0084CBB9 /* Tiger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,11 @@
 		EC7BD63119D59D24000A52A6 /* LionsAndTigers */ = {
 			isa = PBXGroup;
 			children = (
+				ECA3848119D5D8D80084CBB9 /* Models */,
+				ECA3848219D5D8E20084CBB9 /* Views */,
 				EC7BD63419D59D24000A52A6 /* AppDelegate.swift */,
 				EC7BD63619D59D24000A52A6 /* ViewController.swift */,
-				EC7BD63819D59D24000A52A6 /* Main.storyboard */,
 				EC7BD63B19D59D24000A52A6 /* Images.xcassets */,
-				EC7BD63D19D59D24000A52A6 /* LaunchScreen.xib */,
 				EC7BD63219D59D24000A52A6 /* Supporting Files */,
 			);
 			path = LionsAndTigers;
@@ -110,6 +112,23 @@
 				EC7BD64919D59D24000A52A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECA3848119D5D8D80084CBB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECA3848319D5D8FA0084CBB9 /* Tiger.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ECA3848219D5D8E20084CBB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC7BD63819D59D24000A52A6 /* Main.storyboard */,
+				EC7BD63D19D59D24000A52A6 /* LaunchScreen.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7BD63719D59D24000A52A6 /* ViewController.swift in Sources */,
+				ECA3848419D5D8FA0084CBB9 /* Tiger.swift in Sources */,
 				EC7BD63519D59D24000A52A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,7 @@
 				EC7BD65019D59D24000A52A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC7BD65119D59D24000A52A6 /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				EC7BD65319D59D24000A52A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
