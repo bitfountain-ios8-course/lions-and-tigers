@@ -15,36 +15,42 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var breedLabel: UILabel!
     
+    var tigers:[Tiger] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myTiger = Tiger()
-        myTiger.name = "Tigger"
-        myTiger.breed = "Bengal"
-        myTiger.age = 3
-        myTiger.image = UIImage(named:"BengalTiger.jpg")
+        var firstTiger = Tiger()
+        firstTiger.name = "Tigger"
+        firstTiger.breed = "Bengal"
+        firstTiger.age = 3
+        firstTiger.image = UIImage(named:"BengalTiger.jpg")
         
-        bgImageView.image = myTiger.image
-        nameLabel.text = myTiger.name
-        ageLabel.text = "Age \(myTiger.age)"
-        breedLabel.text = myTiger.breed
+        bgImageView.image = firstTiger.image
+        nameLabel.text = firstTiger.name
+        ageLabel.text = "Age \(firstTiger.age)"
+        breedLabel.text = firstTiger.breed
         
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
         secondTiger.breed = "Indochinese Tiger"
         secondTiger.age = 2
         secondTiger.image = UIImage(named:"IndochineseTiger.jpg")
-        
+
         var thirdTiger = Tiger()
         thirdTiger.name = "Jacob"
         thirdTiger.breed = "Malayan Tiger"
         thirdTiger.age = 4
         thirdTiger.image = UIImage(named:"MalayanTiger.jpg")
         
+        tigers.append(thirdTiger)
+
         var fourthTiger = Tiger()
         fourthTiger.name = "Spar"
         fourthTiger.breed = "Siberian Tiger"
         fourthTiger.age = 5
         fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
+        
+        tigers += [firstTiger, secondTiger, thirdTiger, fourthTiger]
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +59,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBarButtonPressed(sender: UIBarButtonItem) {
+        println(tigers)
     }
 
 }
