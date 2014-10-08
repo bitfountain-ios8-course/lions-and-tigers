@@ -62,10 +62,14 @@ class ViewController: UIViewController {
         let index = Int(arc4random_uniform(UInt32(tigers.count)))
         let tiger = tigers[index]
 
-        bgImageView.image = tiger.image
-        nameLabel.text = tiger.name
-        ageLabel.text = "Age \(tiger.age)"
-        breedLabel.text = tiger.breed
+        UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.bgImageView.image = tiger.image
+            self.nameLabel.text = tiger.name
+            self.ageLabel.text = "Age \(tiger.age)"
+            self.breedLabel.text = tiger.breed
+        }) { (finished: Bool) -> Void in
+            
+        }
     }
 
 }
