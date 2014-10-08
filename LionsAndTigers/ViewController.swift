@@ -59,7 +59,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBarButtonPressed(sender: UIBarButtonItem) {
-        println(tigers)
+        let index = Int(arc4random_uniform(UInt32(tigers.count)))
+        let tiger = tigers[index]
+
+        bgImageView.image = tiger.image
+        nameLabel.text = tiger.name
+        ageLabel.text = "Age \(tiger.age)"
+        breedLabel.text = tiger.breed
     }
 
 }
