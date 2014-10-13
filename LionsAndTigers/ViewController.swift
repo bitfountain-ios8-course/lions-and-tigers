@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var breedLabel: UILabel!
     
     var tigers:[Tiger] = []
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,6 @@ class ViewController: UIViewController {
         firstTiger.breed = "Bengal"
         firstTiger.age = 3
         firstTiger.image = UIImage(named:"BengalTiger.jpg")
-        
-        bgImageView.image = firstTiger.image
-        nameLabel.text = firstTiger.name
-        ageLabel.text = "Age \(firstTiger.age)"
-        breedLabel.text = firstTiger.breed
         
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
@@ -50,7 +46,12 @@ class ViewController: UIViewController {
         fourthTiger.age = 5
         fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
         
-        tigers += [firstTiger, secondTiger, thirdTiger, fourthTiger]
+        tigers = [firstTiger, secondTiger, thirdTiger, fourthTiger]
+        
+        bgImageView.image = tigers[currentIndex].image
+        nameLabel.text = tigers[currentIndex].name
+        ageLabel.text = "Age \(tigers[currentIndex].age)"
+        breedLabel.text = tigers[currentIndex].breed
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +60,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBarButtonPressed(sender: UIBarButtonItem) {
-        let index = Int(arc4random_uniform(UInt32(tigers.count)))
+        var index:Int
+        
+        do{
+            index = Int(arc4random_uniform(UInt32(tigers.count)))
+        }while currentIndex == index
+    
+        currentIndex = index
+    
         let tiger = tigers[index]
 
         UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
