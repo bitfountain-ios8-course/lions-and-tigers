@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         firstTiger.age = 3
         firstTiger.image = UIImage(named:"BengalTiger.jpg")!
         firstTiger.chuff()
+        firstTiger.chuffANumberOfTimes(3)
         
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
