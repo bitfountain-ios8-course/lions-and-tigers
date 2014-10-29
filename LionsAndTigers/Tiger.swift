@@ -14,4 +14,8 @@ struct Tiger {
     var name = ""
     var breed = ""
     var image:UIImage = UIImage(named:String())!
+    
+    func chuff() {
+        println("Tiger: Chuff Chuff")
+    }
 }
