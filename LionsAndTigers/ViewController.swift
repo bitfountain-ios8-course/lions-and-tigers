@@ -39,8 +39,6 @@ class ViewController: UIViewController {
         thirdTiger.breed = "Malayan Tiger"
         thirdTiger.age = 4
         thirdTiger.image = UIImage(named:"MalayanTiger.jpg")!
-        
-        tigers.append(thirdTiger)
 
         var fourthTiger = Tiger()
         fourthTiger.name = "Spar"
@@ -48,12 +46,12 @@ class ViewController: UIViewController {
         fourthTiger.age = 5
         fourthTiger.image = UIImage(named:"SiberianTiger.jpg")!
         
-        tigers = [firstTiger, secondTiger, thirdTiger, fourthTiger]
+        self.tigers = [firstTiger, secondTiger, thirdTiger, fourthTiger]
         
-        bgImageView.image = tigers[currentIndex].image
-        nameLabel.text = tigers[currentIndex].name
-        ageLabel.text = "Age \(tigers[currentIndex].age)"
-        breedLabel.text = tigers[currentIndex].breed
+        self.bgImageView.image = tigers[currentIndex].image
+        self.nameLabel.text = tigers[currentIndex].name
+        self.ageLabel.text = "Age \(tigers[currentIndex].age)"
+        self.breedLabel.text = tigers[currentIndex].breed
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,12 +63,12 @@ class ViewController: UIViewController {
         var index:Int
         
         do{
-            index = Int(arc4random_uniform(UInt32(tigers.count)))
-        }while currentIndex == index
+            index = Int(arc4random_uniform(UInt32(self.tigers.count)))
+        }while self.currentIndex == index
     
-        currentIndex = index
+        self.currentIndex = index
     
-        let tiger = tigers[index]
+        let tiger = self.tigers[index]
 
         UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             self.bgImageView.image = tiger.image
