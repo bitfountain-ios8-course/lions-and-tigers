@@ -13,5 +13,5 @@ struct Tiger {
     var age = 0
     var name = ""
     var breed = ""
-    var image:UIImage = UIImage(named:String())
+    var image:UIImage = UIImage(named:String())!
 }

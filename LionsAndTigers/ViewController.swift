@@ -24,19 +24,19 @@ class ViewController: UIViewController {
         firstTiger.name = "Tigger"
         firstTiger.breed = "Bengal"
         firstTiger.age = 3
-        firstTiger.image = UIImage(named:"BengalTiger.jpg")
+        firstTiger.image = UIImage(named:"BengalTiger.jpg")!
         
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
         secondTiger.breed = "Indochinese Tiger"
         secondTiger.age = 2
-        secondTiger.image = UIImage(named:"IndochineseTiger.jpg")
+        secondTiger.image = UIImage(named:"IndochineseTiger.jpg")!
 
         var thirdTiger = Tiger()
         thirdTiger.name = "Jacob"
         thirdTiger.breed = "Malayan Tiger"
         thirdTiger.age = 4
-        thirdTiger.image = UIImage(named:"MalayanTiger.jpg")
+        thirdTiger.image = UIImage(named:"MalayanTiger.jpg")!
         
         tigers.append(thirdTiger)
 
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         fourthTiger.name = "Spar"
         fourthTiger.breed = "Siberian Tiger"
         fourthTiger.age = 5
-        fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
+        fourthTiger.image = UIImage(named:"SiberianTiger.jpg")!
         
         tigers = [firstTiger, secondTiger, thirdTiger, fourthTiger]
         
